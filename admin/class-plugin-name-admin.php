@@ -107,7 +107,7 @@ class Plugin_Name_Admin {
 	 */
 	public function my_admin_menu(){
 		add_menu_page( 'new plugin settings', 'Layers Gallery', 'manage_options', 'plugin-name/mainsettings.php', array( $this, 'myplugin_admin_page'), 'dashicons-tickets', 250 );
-		add_submenu_page( 'myplugin/myplugin-admin-page.php', 'Sub Menu Example', 'Sub Level Menu', 'manage_options', 'plugin-name/importer.php', 'myplugin_admin_sub_page');
+		add_submenu_page( 'plugin-name/mainsettings.php', 'Sub Menu Example', 'Sub Level Menu', 'manage_options', 'plugin-name/importer.php', array($this, 'myplugin_admin_sub_page'));
 	}
 
 	public function myplugin_admin_page(){
